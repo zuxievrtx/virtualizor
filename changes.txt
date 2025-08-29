@@ -1,0 +1,63 @@
+[2.9.2][18-07-2025]
+- Edit firewall rule was not working. This is fixed.
+
+[2.9.1][16-06-2025]
+- Custom Control panel issue fixed
+- Firewall form issue fixed
+
+[2.9.0][09-05-2025]
+- VMs with only internal IP was not getting set as dedicated ip in whmcs and due to that it was not sent via email as well.
+
+[2.8.8][25-03-2025]
+- If all option of floating sidebar were disabled from admin side, at that time blank floating menu was shown to managvps. This is fixed.
+
+[2.8.7][04-03-2025]
+- From enduser panel, while clicking on the power option from left sidemenu, it was giving CSRF tiken error. This is fixed.
+
+[2.8.2][23-09-2024]
+- Disable firewall setting was not hiding firewall option from enduser.
+
+[2.8.0][09-09-2024]
+- Updated module with new UI.
+
+[2.7.2][05-03-2024]
+- Added serid field once the VM is created.
+
+[2.7.0][07-12-2023]
+- RDNS entries were not getting deleted. This is fixed.
+
+[2.6.8][09-10-2023]
+- Plan Upgrade was not updating the Plan. Issue is Fixed.
+
+[2.6.7][21-09-2023]
+- Additional ram issue fixed
+- Added sshkey as customfield
+- Side bar will be shown on client panel page
+
+[2.6.6][01-06-2023]
+- Changes related to PHP 8
+- Boot order option added
+
+[2.6.5][31-01-2023]
+- Additional RAM was not getting converted to MB if the "ram_in_gb" was enabled. This is fixed.
+
+[2.6.4][16-12-2022]
+- PHP 8 compatibility added
+
+[2.6.3][24-11-2022]
+- Added Backuply Support
+- Added missing images for control panel
+
+[2.6.2][25-05-2022]
+- Now from whmcs servers list page, user can login to admin panel if "enable_admin_sso" is enabled in virtualizor_conf.php.
+- Added default_language variable in virtualizor_conf file to set default language of enduser panel.
+- Added handling for iso custom fields.
+
+[2.6.1][23-02-2022]
+- Updated module with csrf checking while user operation for start/stop/poweroff/restart vps
+- Handled multiple coming from stackpath in callback
+
+[2.6.0][20-01-2022]
+- Updated enduser ui to new theme
+- If user set bandiwdth as -1 then we will set it as zero
+- When user changes hostname from admin panel of whmcs it was not getting updated in virtualizor on change package
