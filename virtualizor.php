@@ -170,6 +170,45 @@ function virtualizor_ConfigOptions() {
 	return $configarray;
 }
 
+// Additional configuration for NAT port forwarding
+function virtualizor_AdditionalFields($params) {
+	return array(
+		'Enable NAT Port Forwarding' => array(
+			'Type' => 'yesno',
+			'Description' => 'Enable automatic port forwarding for NAT VPS services'
+		),
+		'NAT Public IP' => array(
+			'Type' => 'text',
+			'Size' => '15',
+			'Description' => 'Public IP address for port forwarding (leave empty to use server IP)'
+		),
+		'NAT Port Range' => array(
+			'Type' => 'text',
+			'Size' => '11',
+			'Default' => '20000-30000',
+			'Description' => 'Port range for NAT forwarding (e.g., 20000-30000)'
+		),
+		'NAT Default Dest Port' => array(
+			'Type' => 'text',
+			'Size' => '5',
+			'Default' => '22',
+			'Description' => 'Default destination port (e.g., 22 for SSH)'
+		),
+		'NAT Email Template' => array(
+			'Type' => 'text',
+			'Size' => '25',
+			'Default' => 'NAT VPS Connection Details',
+			'Description' => 'Email template name for NAT connection details'
+		),
+		'NAT IP Range' => array(
+			'Type' => 'text',
+			'Size' => '18',
+			'Default' => '192.168.100.0/24',
+			'Description' => 'Private IP range to identify NAT VPS (CIDR notation)'
+		)
+	);
+}
+
 function virtualizor_CreateAccount($params) {
 
 	global $virtualizor_conf, $whmcsmysql;
